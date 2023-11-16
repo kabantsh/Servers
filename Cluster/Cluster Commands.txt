@@ -3,9 +3,9 @@ clustate
 
 ## Memorize the node that service is started in it
 
-clustvadm  -d CSH_Service -n CSH_NODE1
+clusvadm  -d Service_Name
 
-clustvadm  -e CSH_Service -n CSH_NODE1
+clusvadm  -e Service_Name -n CSH_NODE1
 
 
 to validate configurations file syntax
