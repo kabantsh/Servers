@@ -1,0 +1,28 @@
+
+To know your public IP in Linux/Unix systems:-
+===============================================
+
+
+1) Using dig tool and OpenDNS website:-
+----------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~#  dig +short myip.opendns.com @resolver1.opendns.com	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+2) Using dig tool and google website:-
+--------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# dig TXT +short o-o.myaddr.l.google.com @ns1.google.com	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+Script to run both:-
+#!/bin/bash 
+# To know your public IP:-
+
+clear
+echo "--------|> OpenDNS <|-------- " && dig +short opendns.com @resolver1.opendns.com 
+echo "--------|> GoogleDNS <|-------- " && dig TXT +short o-o.myaddr.google.com @ns1.google.com

@@ -1,0 +1,106 @@
+DNSSEC Master Configuration:-
+=============================
+
+For Ubuntu bind9:-
+~~~~~~~~~~~~~~~~~~
+
+1) Enable DNSSEC
+----------------
+by adding the following configuration directives inside options:-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# vim /etc/bind/named.conf.options		%%%
+%%%	dnssec-enable yes;				%%% ==> in some distro it is already added
+%%%	dnssec-validation yes;				%%%
+%%%	dnssec-lookaside auto;				%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+2) Go to your zone files
+------------------------
+~# cd /var/cache/bind
+
+
+3) Create a Zone Signing Key (ZSK) with the following command
+--------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////
+///	~# dnssec-keygen -a NSEC3RSASHA1 -b 2048 -n ZONE example.com	///
+///////////////////////////////////////////////////////////////////////////
+
+
+
+4) Create a Key Signing Key (KSK) with the following command
+--------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////
+///	~# dnssec-keygen -f KSK -a NSEC3RSASHA1 -b 4096 -n ZONE example.com	///
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+5) Replace zone with dnssec-signzone salt :-
+---------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////
+///	~# dnssec-keygen -f KSK -a NSEC3RSASHA1 -b 4096 -n ZONE example.com	///
+///////////////////////////////////////////////////////////////////////////////////
+
+
+6) Sign the zone with the dnssec-signzone command:-
+----------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////
+///	~# dnssec-signzone -3 <salt> -A -N INCREMENT -o <zonename> -t <zonefilename>	///
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+7) Replace salt with something random. Here is an example with the output:-
+----------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// ~# dnssec-signzone -A -3 $(head -c 1000 /dev/random | sha1sum | cut -b 1-16) -N INCREMENT -o example.com -t example.com.zone  ///
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+7) A 16 character string must be entered as the “salt”. The following command:-
+-------------------------------------------------------------------------------
+///////////////////////////////////////////////////////////
+/// ~# head -c 1000 /dev/random | sha1sum | cut -b 1-16	///
+///////////////////////////////////////////////////////////
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ~# vim /etc/bind/named.conf.local			%%%
+%%% 	zone "example.com" IN {				%%%
+%%%	 type master;					%%%
+%%%	 file "example.com.zone.signed";		%%%
+%%%	 allow-transfer { 2.2.2.2; };			%%%
+%%%	 allow-update { none; };			%%%
+%%% 	};						%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+///////////////////////////////////
+/// ~# service bind9 reload	///
+///////////////////////////////////
+
+
+8) Check if for the DNSKEY record using dig on the same server:-
+------------------------------------------------------------------
+
+///////////////////////////////////////////////////////////
+/// dig DNSKEY example.com. @localhost +multiline	///
+///////////////////////////////////////////////////////////
+
+
+
+reference URL:-
+https://www.digitalocean.com/community/tutorials/how-to-setup-dnssec-on-an-authoritative-bind-dns-server--2
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

@@ -1,0 +1,12 @@
+1- To install IPMI Tool:
+=========================
+~# yum install ipmitool
+
+2- To load ipmitool module in sensor:
+====================================
+~# modprobe ipmi_devintf
+~# modprobe ipmi_si
+
+3- To print sensors status :
+============================
+~# ipmitool sensor

@@ -1,0 +1,16 @@
+clustate
+
+
+## Memorize the node that service is started in it
+
+clustvadm  -d CSH_Service -n CSH_NODE1
+
+clustvadm  -e CSH_Service -n CSH_NODE1
+
+
+to validate configurations file syntax
+
+~# ccs_config_validate -f /etc/cluster/cluster.conf
+Configuration validates
+
+

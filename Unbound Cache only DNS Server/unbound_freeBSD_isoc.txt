@@ -1,0 +1,14 @@
+
+~# sudo portinstall --batch unbound
+
+
+~# vim /usr/local/etc/unbound/unbound.conf
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ server:  
+
+   interface: 0.0.0.0 # This means listen on all interfaces
+
+   access-control: 192.168.0.0/24 allow # replace with your LAN       
+
+   verbosity: 1 #
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

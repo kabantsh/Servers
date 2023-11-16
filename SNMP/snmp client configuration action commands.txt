@@ -1,0 +1,9 @@
+yum install net-snmp
+
+cp /etc/snmp/snmpd.conf /etc/snmp/snmpd.conf.origin
+cp /etc/snmp/snmpd.conf /etc/snmp/snmpd.conf__`date +%F__%s`.bak
+
+cp /home/M.ayman/snmpd.conf /etc/snmp/snmpd.conf
+
+systemctl restart snmpd.service
+systemctl enable snmpd.service

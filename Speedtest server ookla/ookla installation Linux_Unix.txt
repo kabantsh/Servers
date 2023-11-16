@@ -1,0 +1,85 @@
+ OoklaServer Installation - Linux / Unix
+==========================================
+
+1-Download the install script:-
+--------------------------------
+Open terminal and navigate to your desired install directory. 
+This directory should not be web accessible. 
+We recommend using a non-root user to download and use this script.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# wget https://install.speedtest.net/ooklaserver/ooklaserver.sh	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2- Update permissions:-
+-----------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# chmod a+x ooklaserver.sh	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3- Install the server daemon:-
+-------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	./ooklaserver.sh install	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+4- To manage ookla
+--------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# ./ooklaserver.sh start	%%%
+%%%	~# ./ooklaserver.sh restart	%%%
+%%%	~# ./ooklaserver.sh stop	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5- To get help about ookla server:
+-----------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	./ooklaserver.sh   -h	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+6-Verify Installation :-
+------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	http://speedtest.mycompany.com:8080	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+7-Enable ookla to run at statup :-
+------------------------
+
+*- On Redhat-based OS
+/////////////////////
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# vim /etc/rc.d/rc.local					%%%
+%%%   su ooklauser -c './MYPATH/OoklaServer --daemon'			%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+*- On Debian-based OS
+/////////////////////
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# vim /etc/rc.local						%%%
+%%%   su ooklauser -c './MYPATH/OoklaServer --daemon'			%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+If the installation file is not work then try the following
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!	##-Manual Installation				!!! 
+!!!							!!! 
+!!!	~# chmod a+x OoklaServer			!!!
+!!!	"./OoklaServer --daemon"			!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

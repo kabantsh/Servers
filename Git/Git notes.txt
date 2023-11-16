@@ -1,0 +1,45 @@
+ | Git  |
+/--------\
+
+ Git is distributed version control system that has so many features, it has 
+three stages for each file life cycle:-
+1- Modified
+2- Staged
+3- Commited
+
+1-To create git repository:-
+============================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ~# git init		%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2-To show the modified files in git repository:-
+================================================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ~# git status	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3-To to add files to git repository:-
+=====================================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ~# git add myfile.txt 	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
+
+

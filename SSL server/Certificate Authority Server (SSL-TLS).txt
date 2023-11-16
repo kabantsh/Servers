@@ -1,0 +1,45 @@
+Certificate Authority Server (SSL-TLS)
+=======================================
+
+Centos 7.3
+
+first you need to create a key
+-------------------------------
+~# openssl genrsa 1024 > kabantsh.key
+
+
+second you need to create certificate signing request (CSR):-
+-------------------------------------------------------
+~# openssl req -new -key kabantsh.key > kabantsh.csr
+
+Then we need to create a new self-signed certificate key
+---------------------------------------------------------
+~# openssl x509 -in kabantsh.csr -out kabantsh.crt -req -signkey kabantsh.key -days 365
+
+
+
+
+
+
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+~# openssl req -x509 -days 365 -newkey rsa:2048 -keyout localhost.key -out localhost.crt
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

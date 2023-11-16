@@ -1,0 +1,81 @@
+===== debian repository by default but it could be costmized 18.x =====
+
+
+Squid-deb-proxy:-
+==============
+Is a lightweight tool of squid that is used to cache Linux debian packages
+it is preinstall squid proxy configuration file and ACL (access list) to
+serve one specific purpose, which is cache deb files.
+
+///////////////////
+/// On server 	///
+///////////////////
+
+1- deb installation:-
+----------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# apt update				%%%
+%%%	~# apt install squid-deb-proxy		%%%
+%%%	~# apt install squid-deb-proxy-client	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+2- If you want to use other repository beside officials:-
+---------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# vim /etc/squid-deb-proxy/mirror-dstdomainin.acl	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3- Allow it in the firewall:-
+------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# firewall-cmd --add-port 8000/tcp			%%%
+%%%	~# firewall-cmd --add-port 8000/tcp  --permanent	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+///////////////////
+/// On client 	///
+///////////////////
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# apt update				%%%
+%%%	~# apt install squid-deb-proxy-client	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+!!!!!!
+!! Note:-
+!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!	It is easier to install and maintain in the client	!!! 
+!!!	and almost no configurations on server 			!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!
+!! Another Note:-
+!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!	There is no way to preinstall the cache for deb files you may		!!!
+!!!	already have in a disk or your own PC in /var/cache/apt/archive.	!!!
+!!!	This is bad if you are behind a mobile of satellite			!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Refernce url:-
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+https://www.garron.me/en/blog/ubuntu-deb-proxy-cache.html
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
+
+

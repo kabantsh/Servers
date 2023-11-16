@@ -1,0 +1,12 @@
+Step                          Command                                                                   Purpose
+1             setpd ldalloc off <DiskID>                                                     To stop data to drive - Repeat for all PDs
+2             showpd -s                                                                              Make sure disks are in Degraded state
+3             movepdtospare -f -vacate -nowait <DiskID>                       Vacate all data from PD
+4             showpdch -mov                                                                    See the Remaining chunklets to be moved
+5             movech -perm -ovrd X:Y                                   OPTIONAL: If getting an error, move Chunklet manually (example X                                                                                              is the PDID and Y is the Chunklet number) repeat till disk is empty
+6               showpdch -spr <DiskID>                                                 Shows the Spare chunklets on the PD
+7                removespare PDID:a                                                      Removes the Spare chunklets from the PD
+8                dismisspd <DiskID>                                                       Dismisses the PD from the 3PAR
+9                 Redo Steps 3-7 for all PDs
+10               Remove All PDs from Cage                                         Remove the vacated PDs from the 3PAR
+11                 tunesys -chunkpct 1                                                   Tune System

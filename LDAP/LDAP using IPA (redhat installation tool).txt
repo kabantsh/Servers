@@ -1,0 +1,184 @@
+Prereqisites:-
+==============
+
+
+1) Modify Hostfile:-
+=====================
+
+###########################################################################
+###  ~# vim /etc/hosts							###   ,,,>> for both server and client
+###	192.168.56.119  ldap-server.kabantsh.com        ldap-server	### //
+###	192.168.56.118  ldap-client.kabantsh.com        ldap-client	###//
+###########################################################################
+
+2) Disable selinux:-
+--------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# setenforce 0			%%%
+%%%	~# vim /etc/selinux/config	%%%
+%%%	SELINUX=permissive		%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+3) Disable firewall:-
+---------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%	~# systemctl stop	firewalld.service	%%%
+%%%	~# systemctl disable	firewalld.service	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+4) Configure FQDN server for LDAP server and client:-
+-----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# hostnamectl set-hostname ldap-client.kabantsh.com	%%% >>> for ldap client
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# hostnamectl set-hostname ldap-server.kabantsh.com	%%% >>> for ldap server
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+On LDAP server :-
+=================
+1) Install packages required 
+-----------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%	root@ldap-server:~# yum -y install ipa-server bind-dyndb-ldap.x86_64 ipa-server-dns.noarch	%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+2) Configure ipa
+-----------------
+~# ipa-server-install --setup-dns
+output will be like 
+~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Server host name [ldap-server.kabantsh.com]:		#>> if it did not appear exit and make check of your hosts file configurations
+
+Please confirm the domain name [kabantsh.com]:		#>> your domain name 
+
+Please provide a realm name [KABANTSH.COM]:		#>> your realname
+
+
+
+
+Directory Manager password:				# domain password min 8 characters
+
+IPA admin password:					# ipa web GUI (web interface) min 8 characters, default user admin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\
+$$$$$$	Note it will take about 10 miniets		$$$$$$ \
+$$$$$$							$$$$$$	|)>> Notes
+$$$$$$	it is recommended to monitor it to see errors	$$$$$$ /
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$/
+
+
+----------------------------------------
+~# authconfig --enablemkhomedir --update
+
+
+4) If the installation is OK then this command will sucess 
+=========================================================
+
+3) To check if installation in complete 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	root@ldap-server:~# authconfig --enablemkhomedir --update	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	root@ldap-server:~# systemctl start sssd			%%%\
+%%%	root@ldap-server:~# systemctl enable sssd			%%% \>>> to start system security service deamon (sssd)
+%%%	root@ldap-server:~# kinit admin					%%% />>> to start admin
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+
+
+
+5) To connect to LDAP server:-
+-------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+%%%	root@ldap-server:~# kinit admin					%%% >> it will prompt you for ldap username (admin)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+
+
+6) To add and LDAP user through cli:-
+--------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	root@ldap-server:~# ipa useradd					%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+it is recommended to change default shell for the new users in GUI :-
+----------------------------------------------------------------------
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!	go to > IPA server					!!!
+!!!	go to > configurations					!!!
+!!!	Default shell >> /bin/bash				!!!
+!!!	save and exit 						!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+7) You need to put the certificate for users in well known place
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!	root@ldap-server:~# ls -l /etc/ipa/ca.crt	!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+by default 
+
+
+
+On LDAP client :-
+=================
+1) You need to install System Security Service Deamon (sssd) :-
+---------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	root@ldap-client:~# yum install -y authconfig-gtk.x86_64 sssd krb5-workstation.x86_64	%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+2) To let work properly in TUI:-
+---------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
+%%%	 root@ldap-client:~# yum install -y nss-pam-ldapd	%%% )==> required by authconfig-tui 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
+
+3) All info for authconfig will be stored in this file below
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	root@ldap-client:~# vim /etc/nslcd.conf		%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+4) Path of all certificates :-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	root@ldap-client:~# vim /etc/openldap/caserts/		%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+
+*) Finally to connect ldap with active directory :-
+----------------------------------------------------
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!	~# yum install -y realm					!!!
+!!!	~# realm discover dc.kabantsh.com			!!! ==> where dc.kabantsh.com (domian controller FQDN)
+!!!	~# realm  join	dc.kabantsh.com				!!! ==> using administrator account
+!!!	~# realm  join	--user kabantsh dc.kabantsh.com		!!! ==> using kabantsh account
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
+
+

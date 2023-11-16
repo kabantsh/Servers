@@ -1,0 +1,21 @@
+LibreNMS is a GUI tool that is developed on snmp and it easy to use:-
+
+~# apt update
+You need to install the following 
+~# apt install -y apache2 composer fping graphviz imagemagick libapache2-mod-php7.2
+~# apt install -y mariadb-client mariadb-server mtr-tiny nmap php7.2-cli php7.2-curl
+~# apt install -y php7.2-json php7.2-mbstring php7.2-mysql php7.2-snmp php7.2-xml php7.2-zip 
+~# apt install -y php7.2-zip python-memcache python-mysqldb rrdtool snmp snmpd whois
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

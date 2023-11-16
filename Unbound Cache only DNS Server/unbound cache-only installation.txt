@@ -1,0 +1,85 @@
+# yum update -y
+# yum install unbound -y
+
+
+# cp /etc/unbound/unbound.conf /etc/unbound/unbound.conf.original
+
+# vim /etc/unbound/unbound.conf
+	Interface 192.168.56.109
+
+	do-ip4: yes
+	do-udp: yes
+	do-tcp: yes
+	access-control: 0.0.0.0/0 allow
+
+forward-zone:
+        name: "."
+        forward-addr: 8.8.8.8
+        forward-addr: 8.8.4.4
+
+
+* To check configurations:
+---------------------------
+
+# unbound-checkconf /etc/unbound/unbound.conf 
+
+
+
+# systemctl start unbound.service
+# sudo systemctl enable unbound.service
+
+
+* Test DNS Cache Locally
+------------------------
+# drill india.com @192.168.0.50
+
+
+* Flush iptables :-
+----------------
+# iptables -F
+
+
+* Add rule to firewalld:-
+-------------------------
+# firewall-cmd --add-service=dns
+# firewall-cmd --add-service=dns --permanent
+
+
+* Managing and troubleshooting unbound:-
+-----------------------------------------
+# unbound-control status
+
+* Dumping DNS Cache:-
+--------------------
+ # unbound-control dump_cache > /tmp/DNS_cache.txt
+
+
+* test unbound:
+---------------
+# unbound-control lookup google.com
+
+
+* Flushing DNS Records:-
+---------------------
+
+# unbound-control flush www.digitalocean.com
+# unbound-control flush_zone tecmintlocal.com
+
+
+
+
+
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regreds  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
+

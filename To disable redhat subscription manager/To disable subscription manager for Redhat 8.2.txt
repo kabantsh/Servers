@@ -1,0 +1,12 @@
+To disable subscription manager in RHEL-8.2
+===========================================
+
+ Go to /etc/yum/pluginconf.d/subscription-manager.conf and change enable from 1 to 0.
+	enable=0
+
+To disable subscription manager in RHEL-7.6
+===========================================
+
+ Go to /etc/yum/pluginconf.d/enabled_repos_upload.conf and change enable from 1 to 0.
+	enable=0
+

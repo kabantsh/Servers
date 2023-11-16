@@ -1,0 +1,42 @@
+1- To install package :
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ~# yum install fcoe-utils %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2- To view WWN of Server: 
+==========================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ~# cat /sys/class/fc_host/host?/port_name	%%%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0x51402ec012cc1b5c
+0x51402ec012cc1b5e
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%% 						%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3- To ping fc host or storage:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+~# fcping -h 0x51402ec012cc1b5c-F 0x51402ec012cc1b5c
+where:
+-h ==> source HBA
+-F ==> Destination port ID
+
+
+Note: 
+By default fcping will run for ever you can specify the number of packets by using -c option,
+like showing below:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ~# fcping -c 4 -h 0x51402ec012cc1b5c-F 0x51402ec012cc1b5c	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regreds  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
+

@@ -1,0 +1,16 @@
+/var/log/remote-syslog/*/*.log
+		{
+		daily
+		extension .log.bak
+		dateext
+		dateformat __%Y-%m-%d__%s.bak
+		rotate 99999
+		copytruncate
+		maxage 365
+#		size 100M
+		missingok
+		postrotate
+		/usr/bin/systemctl kill -s HUP rsyslog.service >/dev/null 2>&1 || true
+		endscript
+		nocompress
+		}

@@ -1,0 +1,70 @@
+This video was created to show how to install and configure Rancid basics.   
+
+
+Commands used during the video are below:
+
+
+nano /etc/hosts
+192.168.137.220       R1          devices
+192.168.137.221       R2          devices
+192.168.137.222       R3          devices
+192.168.137.223       R4          devices
+192.168.137.224       R5          devices
+
+
+nano /etc/ssh/ssh_config
+    KexAlgorithms +diffie-hellman-group1-sha1
+    Ciphers +aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc    
+systemctl restart ssh
+
+
+apt-get update
+apt-get install subversion telnet mutt
+apt-get install rancid
+
+
+nano /etc/rancid/rancid.conf
+LIST_OF_GROUPS="devices"
+CVSROOT=$BASEDIR/svn; export CVSROOT
+RCSSYS=svn; export RCSSYS
+
+
+chown -R rancid:rancid /var/lib/rancid
+
+
+su - rancid
+
+
+nano /var/lib/rancid/.cloginrc
+#devices
+add method * ssh
+add user * testuser
+add password * testuser testuser
+
+
+chmod 600 /var/lib/rancid/.cloginrc
+
+/var/lib/rancid/bin/clogin R1
+
+/usr/lib/rancid/bin/rancid-cvs
+
+
+nano /var/lib/rancid/devices/router.db
+R1;cisco;up
+R2;cisco;up
+R3;cisco;up
+R4;cisco;up
+R5;cisco;up
+
+
+/usr/lib/rancid/bin/rancid-run
+cd /var/lib/rancid/devices/configs
+ls -al
+cat r1
+
+
+Thanks for viewing and I hope this video helps you!
+
+*************************************
+Music: Ukulele from Bensound.com
+*************************************

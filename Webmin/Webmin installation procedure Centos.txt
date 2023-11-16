@@ -1,0 +1,51 @@
+
+How to install webmin
+======================
+
+1- Download rpm file for Webmin
+-------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# apt update									%%%
+%%%	~# wget http://prdownloads.sourceforge.net/webadmin/webmin-1.831-1.noarch.rpm	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2- Install GPG key in APT repository:
+----------------------------------
+root@kabantsh-TPVM:~# apt-key add jcameron.key.asc
+
+
+
+
+3- Add repository of webmin to APT repository
+------------------------------------------
+root@kabantsh-TPVM:~# vim /etc/apt/sources.list
+
+#M.K (mn keesi) this is repository of webmin
+deb http://download.webmin.com/download/repository sarge contrib
+
+4- Install webmin package:
+--------------------------
+root@kabantsh-TPVM:~# apt update 
+root@kabantsh-TPVM:~# apt install -y webmin
+
+
+###############################################################################
+5- When using ubuntu 18.04 check that these two repo are enabled:-
+---------------------------------------------------------------
+root@kabantsh-TPVM:~# apt-add-repository universe
+'universe' distribution component is already enabled for all sources.
+
+
+root@kabantsh-TPVM:~# apt-add-repository multiverse
+'universe' distribution component is already enabled for all sources.
+###############################################################################
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

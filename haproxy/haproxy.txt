@@ -1,0 +1,72 @@
+HAPROXY (High availability proxy):-
+===================================
+Terminologies:-
+---------------
+
+1- ACL (Access Control List)
+2- Backend.
+3- Frontend.
+
+1- ACL (Access Control List):
+-----------------------------
+	*- Used to verify condition and perform action.
+	*- Condition is combination of ACL with operator.
+	*- Supported conditions : if, unless, eq.
+	*- Supported operators AND, OR, Negate(!).
+   eg. acl URL_loginpath_beg/login
+   URL should be like http://supernoc365.com/login
+
+
+
+2- Backend:
+-----------
+	*- This is set of servers which recieves forwarded requests from backend.
+	*- Two parameters contained by backend:
+		a- List of servers and ports.
+		b- Load balancing algorithms to use.
+###########################################################
+###	haproxy Can work in to modes L4 and L7:-	###
+###########################################################
+
+(*) It works in Layer 4 by defaults like shown below:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	backend appserver
+	balance roundrobin
+	server app1 app1.supernoc365.com:80 check
+	server app2 app2.supernoc365.com:80 check
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(*) If you want to work in layer 7 you can specify it using word "mode" like showing below:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	backend appserver
+	balance roundrobin
+	mode http
+	server app1 app1.supernoc365.com:80 check
+	server app2 app2.supernoc365.com:80 check
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3- Frontend:
+------------
+	*- This define how request should be forward to backend.
+	*- Contains:-
+		a- Set of IP address and port.
+		b- ACL's.
+		c- Backend rule which is already defined in backend
+Front end for Transport layer:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	frontend webapp
+		bind *.80
+		default_backend appserver
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Front end for Application layer:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	frontend webapp
+		acl url_blog path_log/blog
+		default_backend appserver
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+	
+
+

@@ -1,0 +1,67 @@
+Pacemaker commands:
+===================
+
+
+  702  yum install fence-agents-ilo-ssh.x86_64
+  843  yum install -y pacemaker
+  847  yum install -y pcs
+
+passwd hacluster
+
+pcs cluster auth appserver1.example.com  
+
+
+3- Create Cluster 
+
+pcs cluster setup --name "APP-Cluster" appserver1.example.com  
+
+4- Start cluster
+pcs cluster start -all
+
+5- Check service is started
+# systemctl start corosync.service
+# systemctl start pacemaker.service
+
+6- Verify Corosync configuration:
+
+corosync-cfgtool -s
+
+
+
+
+
+
+
+7- To backup pcs cluster config:
+
+~# pcs config backup my_pcs_backup_file
+
+
+8- To restore pcs cluster config:
+~# pcs config restore --local my_pcs_backup_file
+
+
+Pacemaker configuration files are:
+
+Cluster configuration file:
+/var/lib/pacemaker/cib/cib.xml
+
+PCS (managment user interface) file:
+~# vim /etc/sysconfig/pcsd 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PCSD_BIND_ADDR='0.0.0.0'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+Referce URL:
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+https://www.unixarena.com/2015/12/rhel-7-configuring-pacemaker-corosync-redhat-cluster-part-4.html/
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$

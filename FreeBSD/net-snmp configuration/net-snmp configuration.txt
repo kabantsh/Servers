@@ -1,0 +1,14 @@
+ ## Put it in /etc/rc.conf
+ ##########################
+ snmpd_enable="YES"
+ snmpd_flags="-a" 
+ snmpd_conffile="/usr/local/share/snmp/snmpd.conf /etc/snmpd.conf"
+ snmptrapd_enable="YES"
+ snmptrapd_flags="-a -p /var/run/snmptrapd.pid"
+ 
+ 
+ #### Optional SNMP Configuration Variables:
+ 
+  NET_SNMP_SYS_CONTACT="it@mycompany.com"
+  NET_SNMP_SYS_LOCATION="Khartoum-Sudan"
+  DEFAULT_SNMP_VERSION=2

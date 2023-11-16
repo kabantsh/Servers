@@ -1,0 +1,66 @@
+yum install -y postfix
+
+
+ 
+~# vim /etc/postfix/main.cfg
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# uncomment the following lines
+
+myhostname = host.domain.tld
+
+myhostname = virtual.domain.tld
+
+mydomain = domain.tld
+
+myorigin = $myhostname
+
+myorigin = $mydomain
+
+# add the following line to 'all'
+inet_interfaces = all
+
+
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+
+mynetworks = 127.0.0.0/8, 192.168.60.0/24 
+alias_maps = hash:/etc/aliases
+
+home_mailbox = Maildir/
+
+# uncomment smtp banner 
+smtpd_banner = $myhostname ESMTP
+
+
+#M.K (mn keesi)
+#limit an email size for 10M
+message_size_limit = 10485760
+#limit a mailbox for 1G
+mailbox_size_limit = 1073741824
+#for SMPT-Auth
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_security_options = noanonymous
+smtpd_sasl_local_domain = $myhostname
+smtpd_recipient_restrictions = permit_mynetwork,permit_auth)destination,permit_sasl_authenticated,reject
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Dont forget to add it on the firewall
+~# firewall-cmd --add-service=smtp --permanent
+~# firewall-cmd --reload
+
+
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

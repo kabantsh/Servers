@@ -1,0 +1,47 @@
+
+*- First you need to enable the unbound in the starup packages :-
+-----------------------------------------------------------
+# echo local_unbound_enable=yes > /etc/rc.conf.d/local_unbound
+# echo local_unbound_resolvers=\"8.8.8.8 8.8.4.4\" >>/etc/rc.conf.d/local_unbound
+
+# service local_unbound start
+
+
+Then you need to add this lines to 
+
+
+Just add these lines to this file /etc/rc.conf.d/local_unbound
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%		local_unbound_enable=yes		  %%%%%%%
+%%%%%%%		local_unbound_resolvers="8.8.8.8 8.8.4.4" %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+# service local_unbound setup
+# service local_unbound reload
+
+
+
+# cat >/var/unbound/conf.d/clients.conf <<EOF
+server:
+      interface: 0.0.0.0
+      access-control: 192.168.1.0/24 allow
+EOF
+# service unbound reload
+
+
+
+
+
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
