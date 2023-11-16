@@ -1,0 +1,13 @@
+To search for pachages:
+=======================
+C:\ winget search putty
+
+To list installed pachages:
+============================
+C:\ winget list putty
+
+
+To install package:
+===================
+C:\ winget install XPFNZKSKLBP7RJ
+

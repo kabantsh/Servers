@@ -1,0 +1,32 @@
+:: Fresh Installation for windows:
+:: ===============================
+
+:: To install notepad 
+winget install --id Notepad++.Notepad++
+
+:: To install putty
+winget install --id XPFNZKSKLBP7RJ
+
+:: To install firefox
+winget install --id Mozilla.Firefox
+
+:: To install Git for windows
+winget install --id Git.Git
+
+:: To install Git for Docker for Windows
+winget install --id Docker.DockerDesktop
+
+:: To install Git for uget
+winget install --id uGetdm.uGet
+
+:: To install libre office
+winget install TheDocumentFoundation.LibreOffice
+
+:: To install VLC Media Player
+winget install VideoLAN.VLC
+
+:: To install VPN Psiphon
+winget install PsiphonInc.Psiphon
+
+:: To install WinRAR
+winget install RARLab.WinRAR
