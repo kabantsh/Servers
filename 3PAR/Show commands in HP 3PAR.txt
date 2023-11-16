@@ -1,0 +1,80 @@
+3PARMAIN cli% help show
+show* -  Show information about resources.
+
+In each case type "help <command>" for detailed help.
+
+        showalert        - show status of system alerts
+        showaocfg        - show all Adaptive Optimization configurations
+        showauthparam    - show authentication parameters
+        showbattery      - show battery status information
+        showblock        - show block mapping info for vvs, lds, pds
+        showcage         - show disk cage information
+        showcim          - show the CIM server information
+        showclienv       - show CLI environment parameters
+        showcpg          - show Common Provisioning Groups (CPGs)
+        showdate         - show date and time on all system nodes
+        showdomain       - show domains in the system
+        showdomainset    - show sets of domains in the system
+        showeeprom       - show node eeprom information
+        showeventlog     - show event logs
+        showfirmwaredb   - show current database of firmware levels
+        showhost         - show host and host path information
+        showhostset      - show sets of hosts in the system
+        showinventory    - show hardware inventory
+        showiscsisession - show iscsi sessions
+        showld           - show logical disks (LDs) in the system
+        showldch         - show LD to PD chunklet mapping
+        showldmap        - show LD to VV mapping
+        showlicense      - show installed license key
+        shownet          - show network configuration and status
+        shownode         - show node and its component information
+        shownodeenv      - show node environmental status (voltages,
+                           temperatures)
+        showpatch        - show what patches have been applied to the system
+        showpd           - show physical disks (PDs) in the system
+        showpdata        - show preserved data status
+        showpdch         - show status of selected chunklets of physical disks
+        showpdvv         - show PD to VV mapping
+        showport         - show Fibre Channel and iSCSI ports in the system
+        showportarp      - show ARP table for ports
+        showportdev      - show detailed information about devices on a port
+        showportisns     - show iSNS host information for ports
+        showportlesb     - show Link Error Status Block information about
+                           devices on Fibre Channel port
+        showportpel      - show Phy Error Log information about
+                           devices on SAS port
+        showqos          - show QoS rules in the system
+        showrcopy        - show Remote Copy configuration information
+        showrctransport  - show information about end-to-end transport for
+                           Remote Copy
+        showrole          - show information about roles in the system
+        showrsv          - show information about reservation and registration
+                           of VLUNs connected on a Fibre Channel port
+        showsched        - show scheduled tasks in the system
+        showsnmppw       - shows SNMP access passwords
+        showsnmpmgr      - show SNMP trap managers
+        showsnmpuser     - show SNMPv3 users and their authentication and privacy protocols
+        showspace        - show estimated free space
+        showspare        - show information about spare and relocated chunklets
+        showsshkey       - show ssh public keys authorized by the current user
+        showsys          - show system information (system name, serial number etc.)
+        showsysmgr       - show system manager startup state
+        showtarget       - show unrecognized targets
+        showtask         - show information about tasks
+        showtemplate     - show templates
+        showtoc          - show system Table of Contents (TOC) summary
+        showtocgen       - show system Table of Contents (TOC) generation number
+        showuser         - show user accounts and SSH keys
+        showuseracl      - show user access control list
+        showuserconn     - show user connections
+        showversion      - show software versions
+        showvlun         - show virtual LUNs (VLUNs) in the system
+        showvv           - show virtual volumes (VVs) in the system
+        showvvcpg        - show VV space distribution among CPGs
+        showvvmap        - show VV to LD mapping
+        showvvpd         - show VV distribution across PDs
+        showvvset        - show sets of VVs in the system
+        showwsapi        - show the Web Services API server information
+
+Use setclienv command to change the table format options.
+

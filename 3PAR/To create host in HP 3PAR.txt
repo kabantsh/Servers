@@ -1,0 +1,4 @@
+## To Create Host Using Command line in HP 3par
+
+
+createhost -loc "HQ-DataCenter" -ip "192.168.0.199" -os "RHEL-8.4" -model "HP ProLiant DL380p Gen8" -contact "it@mycompany.com , helpdesk@mycompany.com"  -comment "App Server 1" AppServer1 500143802424e088 500143802424e08a

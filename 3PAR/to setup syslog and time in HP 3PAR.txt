@@ -1,0 +1,19 @@
+To set up time:
+===============
+setdate 110908472021
+setdate MMDDhhmmCCYY
+
+
+To set up remote syslog:
+========================
+showsys -param 
+setsys RemoteSyslogHost 192.168.0.100
+setsys RemoteSyslog 1
+
+
+To verify:
+==========
+3par7400 cli% showsys -param
+
+
+

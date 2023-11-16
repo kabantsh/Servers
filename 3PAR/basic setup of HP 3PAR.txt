@@ -1,0 +1,7 @@
+3par basic setup:
+=================
+
+setsys -name 3PARMAIN
+setsys -loc "HQ-DataCenter"
+setsys -owner IT-Team
+setsys -contact "it@mycompany.com"

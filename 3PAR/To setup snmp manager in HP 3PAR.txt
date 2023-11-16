@@ -1,0 +1,2 @@
+
+setsnmpmgr -snmpuser MySNMP_User -version 2 192.168.0.100

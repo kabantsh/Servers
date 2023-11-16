@@ -1,0 +1,26 @@
+To show ssh key :
+=================
+
+3par cli% getsshkey
+
+To set ssh key  :
+=================
+3par cli% setsshkey -add 
+Please enter the SSH public key below.  When finished, press enter twice.
+The key is usually long.  It's better to copy it from inside an editor
+and paste it here.  (Please make sure there are no extra blanks.)
+The maximum number of characters used to represent the SSH key 
+(including the "from" option, key type, and additional comments) is 4095.
+
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA3qWkzzk5ZsqYO4t2JEwG3+SuH2ajMMwWjbH0DK3OOBmLnUJjT8TgVoEj8kfAj1sdmSZ3llsSauY3lmZC1V+ULfNst1S3q229ghi9lhq3OkXD8B+AXNoysJ5+YE0WvUJJXxDICUmy4raczzu6kKKNFaWCpDarcryBaoXBxADcv1XJmjojf7IOZ0lJ8cIrAR0BOl8OD86HUSRi63u/ziWypYS8yLQ9OnfIijSZcipug2vhD7IAvOmvszSaavgAon256ME73J5lBXg7NZL2Xrl/IezjBocNWUucB+AAz4yRXOKAXSyRfSFTLnP1KY3HLSO3C2MCXxgwLlXpmJrVrtcaIQ==
+
+SSH public key successfully set.
+3par cli% 
+
+To remove ssh key:
+==================
+3par cli% removesshkey
+
+
+Note:
+Press Enter Twice after pasting the public key to enter the key
