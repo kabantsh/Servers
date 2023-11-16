@@ -1,0 +1,86 @@
+===== Ubuntu 18.x =====
+
+
+APT-cache-ng:-
+==============
+Is a tool that is used to cache Unix/Linux packages using http proxy
+
+
+1- apt cache installation:-
+----------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# apt update			%%%
+%%%	~# apt install apt-cache-ng	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+2- make sure that apt-cache service is started and make sure it is enabled:-
+-----------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# systemctl status apt-cacher-ng	%%%
+%%%	~# systemctl enable apt-cacher-ng	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+3- Allow it in the firewall:-
+------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# firewall-cmd --add-port 3142/tcp			%%%
+%%%	~# firewall-cmd --add-port 3142/tcp  --permanent	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+4- verify apt-cacher is active and running:-
+--------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# firefox http://192.168.60.100:3142/apt-cacher	%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5- make sure of this default configurations:-
+---------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# vim /etc/apt-cacher-ng/acng.conf	%%%====\
+CacheDir: /var/cache/apt-cacher-ng			\
+LogDir: /var/log/apt-cacher-ng				 \
+SupportDir: /usr/lib/apt-cacher-ng			  )> It is all default
+ReportPage: acng-report.html				 /
+PidFile: /var/run/apt-cacher-ng/pid			/
+%%%						%%%====/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+6- In order to server https repository:-
+----------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	~# vim /etc/apt-cacher-ng/acng.conf		%%%
+PassThroughPattern: .*		##>> uncomment this line
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+Refernce url:-
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+https://kifarunix.com/how-to-setup-apt-caching-server-using-apt-cacher-ng-on-ubuntu-18-04/
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
+
+

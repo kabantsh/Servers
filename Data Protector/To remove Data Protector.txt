@@ -1,0 +1,21 @@
+Linux systems
+
+To manually remove files from a Linux system, delete them from the following directories and then delete the directories using the rm command:
+
+rm -fr /var/opt/omni
+
+rm -fr /etc/opt/omni
+
+rm -fr /opt/omni 
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

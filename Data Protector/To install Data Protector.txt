@@ -1,0 +1,24 @@
+Linux systems
+
+To manually install DP in Linux system, delete them from the following directories and then delete the directories using the rm command:
+
+~# sh omnisetup.sh  -install cc,javagui,da,ma,oracle8,vmware
+
+
+Add hostname to hosts file:
+~# vim /etc/hosts
+10.141.8.15 backupser.nsc.com backupser
+
+
+~# vim /etc/opt/omni/client/cell_server
+backupser
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
