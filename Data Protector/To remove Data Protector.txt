@@ -14,7 +14,7 @@ rm -fr /opt/omni
  |+~~~~~~~~~~~~~~~+
  || Best regrets  |
  || Mohamed Ayman |
- || kabantsh	  |
+ || kabantsh	      |
  |+~~~~~~~~~~~~~~~+
  |
  |

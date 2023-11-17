@@ -7,17 +7,17 @@ To manually install DP in Linux system, delete them from the following directori
 
 Add hostname to hosts file:
 ~# vim /etc/hosts
-10.141.8.15 backupser.nsc.com backupser
+192.168.0.100 dpserver.example.com dpserver
 
 
 ~# vim /etc/opt/omni/client/cell_server
-backupser
+dpserver
 
 
  |+~~~~~~~~~~~~~~~+
  || Best regrets  |
  || Mohamed Ayman |
- || kabantsh	  |
+ || kabantsh	      |
  |+~~~~~~~~~~~~~~~+
  |
  |
