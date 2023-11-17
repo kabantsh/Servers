@@ -30,3 +30,6 @@ winget install PsiphonInc.Psiphon
 
 :: To install WinRAR
 winget install RARLab.WinRAR
+
+:: To install Mozilla Thunderbird
+winget install Mozilla.Thunderbird
