@@ -1,0 +1,30 @@
+ **أوامر Shell لـ ESXi:**
+=======================
+
+
+**إدارة المضيف(host management commands):**
+
+* `esxcli system resource get`: احصل على معلومات موارد النظام.
+[Image of ESXi shell command window]
+* `esxcli storage core adapter rescan`: إعادة مسح محولات التخزين.
+* `esxcli network vnic add`: إضافة بطاقة واجهة شبكة افتراضية (vNIC).
+* `esxcli vm.power.on`: تشغيل آلة افتراضية (VM).
+* `esxcli vm.power.off`: إيقاف تشغيل آلة افتراضية.
+
+**أوامر إدارة الشبكات والإعدادات (Network managment and configutaiton):**
+
+* `esxcli system module list`: قائمة الوحدات المثبتة.
+[Image of ESXi shell command window]
+* `esxcli network vswitch standard add`: إضافة مفتاح افتراضي قياسي.
+* `esxcli network ip interface add`: إضافة واجهة IP.
+* `esxcli system config backup`: عمل نسخة احتياطية لتكوين ESXi.
+* `esxcli system config restore`: استعادة تكوين ESXi.
+
+**أوامر المراقبة والتشخيص (Monitoring and diagnoses):**
+
+* `esxcli system version get`: احصل على معلومات إصدار ESXi.
+[Image of ESXi shell command window]
+* `esxcli system health get`: احصل على معلومات حالة النظام.
+* `esxcli performance metrics.list`: قائمة بمؤشرات الأداء المتاحة.
+* `esxcli vm process list`: قائمة بعمليات VM.
+* `esxcli vm logfile list`: قائمة بملفات سجل VM.

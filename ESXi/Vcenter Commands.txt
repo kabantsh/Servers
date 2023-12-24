@@ -1,0 +1,37 @@
+**أوامر PowerCLI لـ vCenter:**
+=======================
+
+**إدارة المضيف(host management commands):**
+
+* `Get-VMHost`: احصل على معلومات حول المضيف.
+[Image of vCenter PowerCLI command window]
+* `New-VMHost`: إنشاء مضيف جديد.
+* `Remove-VMHost`: إزالة مضيف.
+* `Start-VM`: تشغيل آلة افتراضية.
+* `Stop-VM`: إيقاف تشغيل آلة افتراضية.
+
+**إدارة المخزون:**
+
+* `Get-VM`: احصل على معلومات حول VM.
+[Image of vCenter PowerCLI command window]
+* `New-VM`: إنشاء آلة افتراضية جديدة.
+* `Remove-VM`: إزالة آلة افتراضية.
+* `Get-Datastore`: احصل على معلومات حول مخزن البيانات.
+* `New-Datastore`: إنشاء مخزن بيانات جديد.
+
+**أوامر إدارة الشبكات والإعدادات (Network managment and configutaiton):**
+
+* `Set-VMNetworkAdapter`: تكوين إعدادات محول شبكة VM.
+* `Set-VMResourcePool`: تكوين إعدادات مجموعة موارد VM.
+* `New-VirtualSwitch`: إنشاء مفتاح افتراضي جديد.
+* `Set-VirtualDisk`: تكوين إعدادات قرص VM.
+* `Get-VPMigration`: إدارة انتقال VM.
+
+**المراقبة والأتمتة:**
+
+* `Get-Stat`: احصل على الإحصائيات من المضيفين والآلات الافتراضية.
+[Image of vCenter PowerCLI command window]
+* `Get-Event`: احصل على سجلات الأحداث.
+* `Start-Job`: بدء مهمة في الخلفية.
+* `Wait-Job`: انتظار اكتمال مهمة.
+* `New-ScheduledTask`: إنشاء مهمة مجدولة.
