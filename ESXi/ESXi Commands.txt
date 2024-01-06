@@ -28,3 +28,14 @@
 * `esxcli performance metrics.list`: قائمة بمؤشرات الأداء المتاحة.
 * `esxcli vm process list`: قائمة بعمليات VM.
 * `esxcli vm logfile list`: قائمة بملفات سجل VM.
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

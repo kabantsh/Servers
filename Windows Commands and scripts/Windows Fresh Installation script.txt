@@ -33,3 +33,14 @@ winget install RARLab.WinRAR
 
 :: To install Mozilla Thunderbird
 winget install Mozilla.Thunderbird
+
+
+:: To install Wireshark
+winget install WiresharkFoundation.Wireshark
+
+
+:: To install Npcap as it is required for wireshark
+winget install Insecure.Npcap
+
+:: To install Microsoft PowerToys tool for convert image to text in windows
+winget install Microsoft.PowerToys

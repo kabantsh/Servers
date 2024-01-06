@@ -35,3 +35,13 @@
 * `Start-Job`: بدء مهمة في الخلفية.
 * `Wait-Job`: انتظار اكتمال مهمة.
 * `New-ScheduledTask`: إنشاء مهمة مجدولة.
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

@@ -1,6 +1,0 @@
-To build docker from docker file:
-=================================
-~# docker build -t "welcome-to-docker" .
-
--t --> to tage your image
-. --> is the location of Dockerfile
