@@ -57,7 +57,7 @@ Exit status:
  |+~~~~~~~~~~~~~~~+
  || Best regrets  |
  || Mohamed Ayman |
- || kabantsh          |
+ || kabantsh      |
  |+~~~~~~~~~~~~~~~+
  |
  |
