@@ -1,3 +1,15 @@
+أوامر git زي كلمات السر:
+
+كل أمر زي جملة خفيفة و يعمل حاجة معينة:
+
+    init: بتجهز بيه المستودع بتاعك (initialize a repository).
+    clone: بتنسخ بيهو المستودع من حته تانية (repository) (clone a repository).
+    add: بتضيف بيهو مستودع جديد (add files to staging area).
+    commit: بتطبق التغيير العملته على المستودع المحلي (commit changes to the repository).
+    push: بترفع التغيير العملته من المستودع المحلي للمستودع الخارجي أو البعيد (push changes to a remote repository).
+    pull: بتجر التغيير من المستودع الخارجي أو البعيد للمستودع الداخلي (pulled) (update your local repository).
+    branch: بتعمل ليك فرع جديد و هنا بنفعك مثلا لو عاوز تضيف ميزة جديدة add new feature (create a branch).
+    merge: بتدمج أكثر من فرع مع بعض و بنفعك مثلا لو الميزة الجديدة نجحت (branches) في فرع واحد (merge branches).
 
 
  |+~~~~~~~~~~~~~~~+
