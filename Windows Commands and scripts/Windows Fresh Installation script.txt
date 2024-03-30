@@ -44,3 +44,7 @@ winget install Insecure.Npcap
 
 :: To install Microsoft PowerToys tool for convert image to text in windows
 winget install Microsoft.PowerToys
+
+
+:: To install PowerAutomate tool
+winget install Microsoft.PowerAutomateDesktop

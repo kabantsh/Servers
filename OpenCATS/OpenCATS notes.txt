@@ -1,0 +1,39 @@
+
+How to install OpenCATS
+======================
+
+1- configure debendidnces of OpenCATS
+-------------------------------------
+~# apt-get install mariadb-server mariadb-client apache2
+
+2- Configure SQL Server Secure :
+--------------------------------
+~# mysql_secure_installation
+~# sudo mysql -u root -p
+~# CREATE USER CREATE `` IDENTIFIED BY ‘databasepassword’;
+
+
+3- Confiugre and install PHP
+----------------------------
+~# add-apt-repository ppa:ondrej/php
+~# apt install php7.2 php7.2-soap php7.2-ldap php7.2-mysqli php7.2-gd php7.2-xml php7.2-curl php7.2-mbstring php7.2-zip
+
+4- Restart apache:
+~# service apache2 restart
+
+
+Reference URL
+=============
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://documentation.opencats.org/installation/install-on-ubuntu
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

@@ -1,0 +1,100 @@
+{
+  "properties": {
+    "lenses": {
+      "0": {
+        "order": 0,
+        "parts": {
+          "0": {
+            "position": {
+              "x": 0,
+              "y": 0,
+              "colSpan": 4,
+              "rowSpan": 6
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "resourceType",
+                  "value": "Microsoft.Resources/resources"
+                }
+              ],
+              "type": "Extension/HubsExtension/PartType/BrowseAllResourcesPinnedPart",
+              "viewState": {
+                "content": {
+                  "selectableData": {
+                    "activatedItems": [],
+                    "selectedItems": []
+                  }
+                }
+              }
+            }
+          },
+          "1": {
+            "position": {
+              "x": 0,
+              "y": 6,
+              "colSpan": 2,
+              "rowSpan": 1
+            },
+            "metadata": {
+              "inputs": [],
+              "type": "Extension/HubsExtension/PartType/ServicesHealthPart"
+            }
+          },
+          "2": {
+            "position": {
+              "x": 4,
+              "y": 0,
+              "colSpan": 4,
+              "rowSpan": 2
+            },
+            "metadata": {
+              "inputs": [],
+              "type": "Extension/HubsExtension/PartType/AzureProjectGettingStartedPart"
+            }
+          },
+          "3": {
+            "position": {
+              "x": 4,
+              "y": 2,
+              "colSpan": 4,
+              "rowSpan": 5
+            },
+            "metadata": {
+              "inputs": [],
+              "type": "Extension/HubsExtension/PartType/GettingStartedPart"
+            }
+          },
+          "4": {
+            "position": {
+              "x": 2,
+              "y": 6,
+              "colSpan": 2,
+              "rowSpan": 1
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "selectedMenuItemId",
+                  "value": "",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/HubsExtension/PartType/GalleryTile"
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "model": {}
+    }
+  },
+  "name": "My Dashboard",
+  "type": "Microsoft.Portal/dashboards",
+  "location": "INSERT LOCATION",
+  "tags": {
+    "hidden-title": "My Dashboard"
+  },
+  "apiVersion": "2015-08-01-preview"
+}
