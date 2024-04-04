@@ -4,3 +4,18 @@ Set-ExecutionPolicy RemoteSigned
 To install Azure Module on poweshell:
 Install-Module Name Az AllowClobber -Scope CurrentUser
 
+
+Reference :
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Exam Prep AZ-104: Microsoft Azure Administrator Associate - Coursera
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+ |+~~~~~~~~~~~~~~~+
+ || Best Regards  |
+ || Mohamed Ayman |
+ || kabantsh      |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
+
