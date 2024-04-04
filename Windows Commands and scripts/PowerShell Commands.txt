@@ -3,7 +3,7 @@
 
 عشان تتأكد من الإتصال بتاعك :
 ======================= 
-PS C:\Users\MYUSER> Test-NetConnection google.com  -p 443
+PS:\> Test-NetConnection google.com  -p 443
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ComputerName     : google.com
 RemoteAddress    : XXX.XXX.XXX.XXX
@@ -14,6 +14,14 @@ TcpTestSucceeded : True
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh      |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
 
 
 
