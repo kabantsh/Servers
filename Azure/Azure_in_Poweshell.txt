@@ -1,8 +1,15 @@
+1- Make sure you allow remote execution:
+========================================
 Set-ExecutionPolicy RemoteSigned
 
 
-To install Azure Module on poweshell:
+2- To install Azure Module on poweshell:
+======================================
 Install-Module Name Az AllowClobber -Scope CurrentUser
+
+3- To import AZ Module
+===================================
+Import-Module Az -Verbose
 
 
 Reference :
