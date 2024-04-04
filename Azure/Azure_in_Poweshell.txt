@@ -7,10 +7,13 @@ Set-ExecutionPolicy RemoteSigned
 ======================================
 Install-Module Name Az AllowClobber -Scope CurrentUser
 
-3- To import AZ Module
-===================================
+3- To import AZ Module:
+=======================
 Import-Module Az -Verbose
 
+4- To Connect to AZ account:
+============================
+Connect-AzAccount
 
 Reference :
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
