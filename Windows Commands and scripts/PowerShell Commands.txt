@@ -1,0 +1,21 @@
+## Power Shell command lines
+#############################
+
+To test network connction :
+=========================== 
+PS C:\Users\MYUSER> Test-NetConnection google.com  -p 443
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ComputerName     : google.com
+RemoteAddress    : XXX.XXX.XXX.XXX
+RemotePort       : 443
+InterfaceAlias   : XXXX
+SourceAddress    : XXX.XXX.XXX.XXX
+TcpTestSucceeded : True
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
