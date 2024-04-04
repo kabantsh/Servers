@@ -1,8 +1,8 @@
 ## Power Shell command lines
 #############################
 
-To test network connction :
-=========================== 
+عشان تتأكد من الإتصال بتاعك :
+======================= 
 PS C:\Users\MYUSER> Test-NetConnection google.com  -p 443
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ComputerName     : google.com
@@ -12,6 +12,9 @@ InterfaceAlias   : XXXX
 SourceAddress    : XXX.XXX.XXX.XXX
 TcpTestSucceeded : True
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
 
 
 
