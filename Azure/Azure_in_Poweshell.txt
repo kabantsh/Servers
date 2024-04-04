@@ -1,0 +1,6 @@
+Set-ExecutionPolicy RemoteSigned
+
+
+To install Azure Module on poweshell:
+Install-Module Name Az AllowClobber -Scope CurrentUser
+
