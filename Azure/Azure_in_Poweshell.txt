@@ -15,6 +15,13 @@ Import-Module Az -Verbose
 ============================
 Connect-AzAccount
 
+5- Now you can run every command you want:
+==========================================
+Get-AzResourceGroup-Location centralus
+
+
+
+
 Reference :
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Exam Prep AZ-104: Microsoft Azure Administrator Associate - Coursera
