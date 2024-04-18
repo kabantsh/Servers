@@ -48,3 +48,7 @@ winget install Microsoft.PowerToys
 
 :: To install PowerAutomate tool
 winget install Microsoft.PowerAutomateDesktop
+
+
+:: To install Adobe.Acrobat.Reader
+winget install Adobe.Acrobat.Reader.64-bit
