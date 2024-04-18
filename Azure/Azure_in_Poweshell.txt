@@ -1,0 +1,38 @@
+1- Make sure you allow remote execution:
+========================================
+Set-ExecutionPolicy RemoteSigned
+
+
+2- To install Azure Module on poweshell:
+======================================
+Install-Module Name Az AllowClobber -Scope CurrentUser
+
+3- To import AZ Module:
+=======================
+Import-Module Az -Verbose
+
+4- To Connect to AZ account:
+============================
+Connect-AzAccount
+
+5- Now you can run every command you want:
+==========================================
+Get-AzResourceGroup-Location centralus
+
+
+
+
+Reference :
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Exam Prep AZ-104: Microsoft Azure Administrator Associate - Coursera
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+ |+~~~~~~~~~~~~~~~+
+ || Best Regards  |
+ || Mohamed Ayman |
+ || kabantsh      |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
+
