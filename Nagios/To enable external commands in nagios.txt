@@ -1,0 +1,33 @@
+~$ vim /etc/nagios3/nagios.cfg
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% check_external_commands=1 	 %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+~$ /etc/init.d/nagios3 reload
+~$ /etc/init.d/nagios3 stop
+~$ dpkg-statoverride --update --add nagios www-data 2710 /var/lib/nagios3/rw
+~$ dpkg-statoverride --update --add nagios nagios 751 /var/lib/nagios3
+
+~$ /etc/init.d/nagios3 start
+
+
+
+
+Refernce url:-
+https://www.projectenvision.com/blog/4/Sorry-but-Nagios-is-currently-not-checking-for-external-commands
+
+
+
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

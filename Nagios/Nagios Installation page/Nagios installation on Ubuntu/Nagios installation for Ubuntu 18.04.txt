@@ -1,0 +1,102 @@
+===== Ubuntu 18.x =====
+
+~# sudo apt-get update
+~# sudo apt-get install -y autoconf gcc libc6 make wget unzip apache2 php libapache2-mod-php7.2 libgd-dev
+
+ 
+Downloading the Source
+
+cd /tmp
+wget -O nagioscore.tar.gz https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.4.3.tar.gz
+tar xzf nagioscore.tar.gz
+
+ 
+Compile
+
+cd /tmp/nagioscore-nagios-4.4.3/
+~# sudo ./configure --with-httpd-conf=/etc/apache2/sites-enabled
+~# sudo make all
+
+ 
+Create User And Group
+
+This creates the nagios user and group. The www-data user is also added to the nagios group.
+
+~# sudo make install-groups-users
+~# sudo usermod -a -G nagios www-data
+
+ 
+Install Binaries
+
+This step installs the binary files, CGIs, and HTML files.
+
+~# sudo make install
+
+ 
+Install Service / Daemon
+
+This installs the service or daemon files and also configures them to start on boot.
+
+~# sudo make install-daemoninit
+
+ 
+
+Information on starting and stopping services will be explained further on.
+
+ 
+Install Command Mode
+
+This installs and configures the external command file.
+
+~# sudo make install-commandmode
+
+ 
+Install Configuration Files
+
+This installs the *SAMPLE* configuration files. These are required as Nagios needs some configuration files to allow it to start.
+
+~# sudo make install-config
+
+ 
+Install Apache Config Files
+
+This installs the Apache web server configuration files and configures Apache settings.
+
+~# sudo make install-webconf
+~# sudo a2enmod rewrite
+~# sudo a2enmod cgi
+
+ 
+Configure Firewall
+
+You need to allow port 80 inbound traffic on the local firewall so you can reach the Nagios Core web interface.
+
+~# sudo ufw allow Apache
+~# sudo ufw reload
+
+ 
+Create nagiosadmin User Account
+
+You'll need to create an Apache user account to be able to log into Nagios.
+
+The following command will create a user account called nagiosadmin and you will be prompted to provide a password for the account.
+
+~# sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+
+
+
+
+
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

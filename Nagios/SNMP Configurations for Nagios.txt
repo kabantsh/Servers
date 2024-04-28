@@ -1,0 +1,12 @@
+check_command    check_snmp!-C public -o sysUpTime.0
+
+check_command    check_snmp!--protocol=3 -U [user] -L [noAuthNoPriv|authNoPriv|authPriv] -a [MD5|SHA] -A [password] -x [DES|AES] -X [password] -o sysUpTime.0
+
+
+
+
+Referance URL:
+--------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+serverfaulthttps://serverfault.com/questions/1017779/how-to-change-nagios-check-snmp-configuration-to-use-snmp-v3
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$

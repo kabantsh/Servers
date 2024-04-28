@@ -1,0 +1,85 @@
+NSCP is windows client for Nagios SNMP server 
+the source file you need to download 
+/////////////////////////////////////
+/// NSClient++ (x64)	 	 ////
+/////////////////////////////////////
+
+
+
+))) in nagios client:-
+=====================
+
+1)  installat NSClient++:-
+--------------------------
+on it installation wizard:-
+allowed hosts : 
+192.168.60.100			
+###>>> if you have more than one server you can seperate it with comma (,)
+
+check the boxes
+[*]	Enable common check_plugins 
+[*]	Enable nsclient server (check_nt)
+[*]	Enable NRPE server (check_nrpe)
+
+click on next
+click on install
+
+
+2) check if the windows firewall is allow the port :-
+-----------------------------------------------------
+
+NSClient is using 12489/udp
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	C:\>netstat -a -p tcp | findstr 12489		%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+3) check the service that you want to monitor:-
+-----------------------------------------------
+Go to windows  "services" 
+Double click on the desired service that you want to monitor
+	for example:-
+	+---------------+-----------------------+
+	|service 	|	service name	|
+	+---------------+-----------------------+  	
+	| DNS client	|	dnscache	|
+	+---------------+-----------------------+
+
+
+))) in nagios server:-
+=====================
+
+
+1) Backup the configuration file before edit it:-
+-------------------------------------------------
+~# vim  /usr/local/nagios/etc/objects/windows.cfg
+
+ 
+
+
+
+
+
+
+
+
+Refernce video:-
+04 windows monitoring (Nagios -bel3arabi-)
+
+
+
+
+
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
