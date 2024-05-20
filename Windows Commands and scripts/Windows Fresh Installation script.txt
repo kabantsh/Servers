@@ -19,6 +19,10 @@ winget install --id Docker.DockerDesktop
 :: To install Git for uget
 winget install --id uGetdm.uGet
 
+
+:: To install Google Chrome 
+winget install --id Google.Chrome
+
 :: To install libre office
 winget install TheDocumentFoundation.LibreOffice
 
