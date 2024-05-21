@@ -1,0 +1,54 @@
+On previos Ubuntu version use below command:
+
+~# apt-get install rancid
+
+
+After Ubuntu 20.04 you need to install it manualy
+
+
+1- Prerequisites installation :
+~# apt install -y diffutils perl tcl expect git gitweb gcc make wget apache2
+
+2- Add rancid user
+~# useradd -s /bin/bash -d /home/rancid/ -m -G sudo rancid
+~# passwd rancid
+   
+3- Download and install rancid package:
+~# wget https://shrubbery.net/pub/rancid/rancid-3.10.tar.gz -P /tmp
+~# tar zxvf /tmp/rancid-3.10.tar.gz -C /tmp/
+
+4- Compile and install rancid package
+~# cd /tmp/rancid-3.10
+~# ./configure --prefix=/opt/rancid --localstatedir=/opt/rancid --with-git --host=localhost
+~# make && make install
+
+5- Create clogin to login in devices
+~#  touch /opt/rancid/.cloginrc
+~#  chown -R rancid:rancid /opt/rancid/
+~#  chmod 0600 /opt/rancid/.cloginrc
+
+~# vim /opt/rancid/.cloginrc
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+add cyphertype * aes128-ctr,aes128-cbc,3des-cbc
+add userprompt HOST1 {.*\r\n.*\r\n.*\r\n.*\r\nHOST1>}
+add userprompt HOST2 {.*\r\n.*\r\n.*\r\n.*\r\nHOST2>}
+add user * admin
+add password HOST1 Password EnablePassword
+add password HOST2 Password EnablePassword
+add password * Password EnablePassword
+add method * ssh
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://goldstein-solutions.com/install-rancid-with-gitweb-on-ubuntu-20-04-lts/
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh      |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
