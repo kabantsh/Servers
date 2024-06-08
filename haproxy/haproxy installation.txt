@@ -1,0 +1,35 @@
+On Ubuntu or any debain based OS use below command:
+####################################################
+
+~# apt-get install haproxy
+
+Or if you need specific package version i.e (version 2.8)
+There is a great wizard for Debian based OS in below URL:
+https://haproxy.debian.net/
+
+
+It will prompt you for OS name and OS version and HAProxy version i.e:
+Ubuntu 20.04 with HA proxy 3.0 LTS:
+https://haproxy.debian.net/#distribution=Ubuntu&release=focal&version=2.8
+
+On Centos or any Redhat based OS use below command:
+####################################################
+
+You can find it inside below repo:
+https://packages.zenetys.com/latest/redhat/
+
+
+
+Reference URL:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://github.com/haproxy/wiki/wiki/Packages
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh      |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
