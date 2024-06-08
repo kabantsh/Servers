@@ -1,0 +1,50 @@
+## إدارة فعالة لحركة مرور الشبكة باستخدام أوامر HAProxy
+
+HAProxy هو برنامج توازن التحميل (Load Balancer) قوي ومتعدد الاستخدامات، يعمل على تحسين كفاءة وأداء تطبيقات الويب وغيرها من خدمات الشبكة. يقوم HAProxy بتوزيع طلبات الشبكة الواردة عبر خوادم خلفية متعددة، مما يساعد على ضمان استجابة سريعة وتحسين تجربة المستخدم. لإدارة HAProxy بشكل فعال، من المهم فهم الأوامر الأساسية التي يتيحها. فيما يلي شرح لأهم الأوامر المستخدمة للسيطرة على تشغيل HAProxy والحصول على معلومات حول وضعه:
+
+طبعا ال HAProxy عبارة عن خدمة عادية 
+(System Service or deamon)
+عشان تتعامل معاها بتستخدم الأمر 
+service 
+أو
+systemctl 
+حسب نظام التشغيل حقك
+
+دي الأوامر المهمة لو شغال بي أداة ال systemctl
+
+
+1. تشغيل HAProxy (start):
+~# systemctl start  haproxy.service
+
+
+2. وقف تشغيل HAProxy (stop):
+
+~# systemctl stop  haproxy.service
+
+
+3. إعادة تشغيل HAProxy (restart):
+~# systemctl restart  haproxy.service
+
+4. معرفة حالة التشغيل (status):
+
+~# systemctl status  haproxy.service
+
+5. إعادة تحميل ملف التكوين  (reload configuration file):
+
+~# systemctl reload  haproxy.service
+
+
+
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || kabantsh      |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
