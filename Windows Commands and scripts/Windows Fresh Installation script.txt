@@ -60,3 +60,6 @@ winget install Adobe.Acrobat.Reader.64-bit
 
 :: To install WinRAR 
 winget install RARLab.WinRAR
+
+:: To install Simplewall for block unnessecary traffic
+winget install Henry++.simplewall
