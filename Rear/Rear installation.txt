@@ -19,6 +19,17 @@ http://download.opensuse.org/repositories/Archiving:/Backup:/Rear/15.4/x86_64/
 
 ~# rpm -ivh rear_2.6+dfsg-1_amd64.rpm 
 
+Prepare backup media dependencies if required:
+Install nfs-utils, cifs-utils, rsync 
+
+
+
+
+
+
+
+
+
 For more information about using rear in Redhat (RHEL) based systems
 https://access.redhat.com/solutions/2115051
 
