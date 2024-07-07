@@ -14,11 +14,13 @@ https://ubuntu.pkgs.org/22.04/ubuntu-universe-amd64/rear_2.6+dfsg-1_amd64.deb.ht
 
 For Redhat Based OS
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-https://access.redhat.com/solutions/2115051
+http://download.opensuse.org/repositories/Archiving:/Backup:/Rear/15.4/x86_64/
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ~# rpm -ivh rear_2.6+dfsg-1_amd64.rpm 
 
+For more information about using rear in Redhat (RHEL) based systems
+https://access.redhat.com/solutions/2115051
 
  |+~~~~~~~~~~~~~~~+
  || Best regrets  |
