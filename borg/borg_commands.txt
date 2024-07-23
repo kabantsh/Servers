@@ -4,6 +4,34 @@
 أولا نجي لي أوامر النسخ الإحتياطية (Backup) 
 و طبعا كلها بتبدأ بي كلمة أصنع أو أفعل (make for short mk)
 
+required arguments:
+  <command>
+    benchmark           benchmark command
+    break-lock          break repository and cache locks
+    check               verify repository
+    compact             compact segment files / free space in
+                        repo
+    config              get and set configuration values
+    create              create backup
+    debug               debugging command (not intended for
+                        normal use)
+    delete              delete archive
+    diff                find differences in archive contents
+    export-tar          create tarball from archive
+    extract             extract archive contents
+    info                show repository or archive information
+    init                initialize empty repository
+    key                 manage repository key
+    list                list archive or repository contents
+    mount               mount repository
+    prune               prune archives
+    recreate            Re-create archives
+    rename              rename archive
+    serve               start repository server process
+    umount              umount repository
+    upgrade             upgrade repository format
+    with-lock           run user command with lock held
+    import-tar          Create a backup archive from a tarball
 
 
 ثانيا نجي لي أوامر الإسترجاع (Recovery Commands):
