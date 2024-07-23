@@ -48,9 +48,8 @@ Enter passphrase for key /media/backup/borgdemo:
 
 
 
-لو محتاج معلومات أكثر عن أداة ريير ممكن تشوف الأمر دا
- ~# borg help
-
+لو محتاج معلومات عملية أكثر عن أداة ريير ممكن تشوف الرابط في الأسفل:
+https://www.borgbackup.org/demo.html
 
  |+~~~~~~~~~~~~~~~+
  || Best regrets  |
