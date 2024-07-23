@@ -37,9 +37,14 @@ required arguments:
 ثانيا نجي لي الجزء العملي
 =========================================
 
-عشان تعمل مستودع لي النسخ الإحتياطية:
-~# borg init --encryption=repokey /media/backup/borgdemo
+عشان تعمل مستودع لي النسخ الإحتياطية طبعا لازم يكون الملف فاضي:
+~# borg init --encryption=repokey /borg_backup_repo/
 
+
+عشان نعمل نسخة إحتياطية مضغوطة
+
+~# borg create --stats --progress --compression lz4 /media/backup/borgdemo::backup1 Wallpaper
+Enter passphrase for key /media/backup/borgdemo:
 
 
 
