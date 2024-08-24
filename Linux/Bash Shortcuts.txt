@@ -3,6 +3,7 @@
 +---------------+---------------------------------------------------------------------------------------+
 | ctrl + a	| Goto BEGINNING of command line							|
 | ctrl + e	| Goto END of command line								|
+| ctrl + r 	| Search backward starting at the current line and moving 'up' 				|
 | ctrl + b	| move back one character								|
 | ctrl + f	| move forward one character								|
 | alt + f	| move cursor FORWARD one word								|

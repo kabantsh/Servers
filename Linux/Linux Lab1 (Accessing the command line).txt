@@ -1,0 +1,63 @@
+To change hostname:
+-------------------
+ 
+root@virtual-box~#  hostnamectl set-hostname master
+root@master# hostname
+master
+
+
+
+Calendar Command (cal):-
+===================
+[root@master ~]#cal
+[root@master ~]#cal 2024
+[root@master ~]#cal 8
+[root@master ~]#cal 8 2024
+
+
+Date Command (date):-
+===================
+[root@master ~]#date --help
+[root@master ~]#date 
+[root@master ~]#date +%F
+[root@master ~]#date +%s
+
+
+CLI calculator:-
+================
+root@master~# dc 
+root@master~# bc
+root@master~# echo '4*4' | bc
+root@master~# echo '4/3' | bc
+root@master~# echo 'scale=2;4/3' | bc
+
+Word counter (wc):-
+===================
+root@km-2015~# cat file1.txt | wc
+
+
+
+Command history:
+[root@master ~]# cat .bash_history 
+[root@master ~]# history
+[root@master ~]# !88
+[root@master ~]# !-10
+[root@master ~]# !ls       (the most recent command)
+[root@master ~]# !!
+[root@master ~]# history -c           (to clear the history)
+
+Hint you can use ctrl + r to search for specific word in History
+
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best Regards  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
