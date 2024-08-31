@@ -52,6 +52,10 @@ Hint you can use ctrl + r to search for specific word in History
 
 
 
+To find all labs go to this link:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://github.com/kabantsh/Servers/tree/master/Linux
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
  |+~~~~~~~~~~~~~~~+
  || Best Regards  |
