@@ -1,0 +1,83 @@
+Help options:
+------------- 
+1- Using manual :
+##################
+
+To go to manual of passwd command:-
+===================================
+~# man passwd		(default section is 1)
+~# passwd -l door       (lock the user)
+~# passwd -u door       (unlock the user)
+~# man 1 passwd
+~# man 5 passwd		(To view file format)
+~# man -k passwd		(To search for word)
+~# man -K passwd		(To search for word and enter each manual)
+
+You can grep manual number from command:
+========================================
+~# man -k delay | grep 1                                                                                                  
+sleep (1)            - delay for a specified amount of time
+
+manual navigations (man):
+=========================
+q: Quit the manual page.
+g: Go to the beginning of the manual page.
+G: Go to the end of the manual page.
+/: Search forward for a specific pattern.
+?: Search backward for a specific pattern.
+n: Go to the next match of the previous search.
+p: Print the current line.
+h: Display a list of available commands within the manual page.
+
+
+To get help in Linux use manual command (man):-
+==============================================
+~# man man 
+
+
+2- Using info and pinfo (pinfo same as info but with colors):
+#################################################################
+~# pinfo passwd
+
+
+3- To get help in Linux use manual command (man):-
+##################################################
+~# cat /usr/share/doc/passwd/README.Debian
+
+
+
+3- To locate files in Linux:-
+#############################
+
+Using locate command:
+=====================
+~# locate passwd
+
+if package is not installed
+~# apt install plocate  (for debian)
+or 
+~# apt install mlocate (for redhat)
+then you need to run command updatedb to update file DB:
+~# updatedb
+
+Using find command:
+=====================
+~# find /etc/ -iname "passwd"
+
+
+
+
+To find all labs go to this link:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://github.com/kabantsh/Servers/tree/master/Linux
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best Regards  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
