@@ -65,7 +65,7 @@ Using find command:
 ~# find /etc/ -iname "passwd"
 
 
-
+find -size +2k -exec du -hs {} \;
 
 To find all labs go to this link:
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

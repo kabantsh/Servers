@@ -1,0 +1,38 @@
+To install Arabic Language:
+-------------------
+ 
+
+
+first you need to install libfribidi:-
+###############################################
+~# sudo apt-get install libfribidi0 libfribidi-dev
+
+Add this lines to gnome-terminal.desktop file:
+###############################################
+~# vim /usr/share/applications/gnome-terminal.desktop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Terminal=true
+Exec=/usr/bin/bicon.bin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+add this line to .bashrc file:
+###############################################
+# hack to launch bicon if not launched
+if ! [[ "$(ps -p $(ps -p $(echo $$) -o ppid=) -o comm=)" =~ 'bicon'* ]]; then
+  bicon.bin
+fi
+
+To find all labs go to this link:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://unix.stackexchange.com/questions/123756/how-to-make-arabic-appear-properly-in-linux-terminal
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ |+~~~~~~~~~~~~~~~+
+ || Best Regards  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
