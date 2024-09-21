@@ -1,0 +1,53 @@
+Managing Local Users and Groups:
+-------------------------------- 
+1- Managing users:
+##################
+
+To create user:-
+=================
+~# useradd door		(first user is created with UID 1000 )
+
+To modify user:-
+=================
+~# usermod door		
+
+To delete user:-
+=================
+~# userdel door		
+
+2- Managing groups:
+##################
+
+To create group:-
+=================
+~# groupadd door		(first group is created with GID 1000 )
+
+To modify group:-
+=================
+~# groupmod door		
+
+To delete user:-
+=================
+~# groupdel door		
+
+
+3- file permissions:
+####################
+
+
+
+
+To find all labs go to this link:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://github.com/kabantsh/Servers/tree/master/Linux
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+This is edited by vim text editor 
+
+ |+~~~~~~~~~~~~~~~+
+ || Best Regards  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
