@@ -29,36 +29,62 @@ To delete user:-
 
 2- Managing groups:
 ##################
-
--Primary group is the user Private Group (UPG).
-~# groupadd sales
-~# groupadd -g 1005 admin
-
-~# id door		(To verify user group)
-
-~# grep sales /etc/group
-groupname:password:GID:list,of,users,in,this,group
-
-
-
+- Groups are used to ease management of users.
+- Any user can be member of one primary group and multiple secondary groups.
+- Primary group is the user Private Group (UPG).
 
 
 To create group:-
 =================
 ~# groupadd sales		(first group is created with GID 1000 )
+~# groupadd -g 1005 admin
+
+~# id door		(To verify user group)
+~# grep sales /etc/group
+groupname:password:GID:list,of,users,in,this,group
+
 
 To modify group:-
 =================
 ~# groupmod -n Marketing sales		(rename a group)
-~# groupmod -g 2000 admin		(To change GID to 2000)		
-
+~# groupmod -g 2000 admin		(To change GID to 2000)	
+	
 To delete user:-
 =================
 ~# groupdel door		
 
 
-3- file permissions:
+3- Switch user (su):
 ####################
+
+~# su door		(To switch to door user)
+~$ exit 		(To exit from door user)
+~# su - door		(To switch to door user with his home directory and login parameters)
+
+To issue command as a root (super user do - sudo):-
+===================================================
+
+~# vim /etc/sudoers	(First you need to add user to sudoers file)
+door   ALL=(ALL)       ALL
+%sales  ALL=(ALL)       ALL
+
+~# sudo passwd door	(Then you can issue any command using sudo command)
+
+
+
+4- file permissions:
+####################
+
+Permissions:
+read(r) 4
+write(w) 2
+execute(x) 1
+
+for example 755 
+rwx for user
+r-x for group
+r-x for other
+ 
 
 
 
