@@ -5,11 +5,23 @@ Managing Local Users and Groups:
 
 To create user:-
 =================
+~# useradd --help
 ~# useradd door		(first user is created with UID 1000 )
+~# passwd door		(To change password of user door)
+~# useradd -G admin -u 1005 -s /usr/sbin/nologin door	(To create user for group with nologin shell)
+~# id door		(To verify user)
+~# id -u door		(To print UID)
+
+~# tail -n 1 /etc/passwd (To verify last created user)
+username:password:UID:GID:Comment:/home/dir:shell
+
+To view password hash
+~# tail -n 1 /etc/shadow
+name:password:1astchange:minage:maxage:warning:inactive:expire:blank
 
 To modify user:-
 =================
-~# usermod door		
+~# usermod -s /bin/bash door	(to change user shell to bash)	
 
 To delete user:-
 =================
@@ -18,13 +30,27 @@ To delete user:-
 2- Managing groups:
 ##################
 
+-Primary group is the user Private Group (UPG).
+~# groupadd sales
+~# groupadd -g 1005 admin
+
+~# id door		(To verify user group)
+
+~# grep sales /etc/group
+groupname:password:GID:list,of,users,in,this,group
+
+
+
+
+
 To create group:-
 =================
-~# groupadd door		(first group is created with GID 1000 )
+~# groupadd sales		(first group is created with GID 1000 )
 
 To modify group:-
 =================
-~# groupmod door		
+~# groupmod -n Marketing sales		(rename a group)
+~# groupmod -g 2000 admin		(To change GID to 2000)		
 
 To delete user:-
 =================
