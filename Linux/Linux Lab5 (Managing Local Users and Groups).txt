@@ -85,6 +85,14 @@ rwx for user
 r-x for group
 r-x for other
  
+To change permissions of file (chmod):-
+=================================
+~# chmod 755 myfile.txt			(To change permission using numerical)	
+-rwxr-xr-x 1 root root 44 Aug 24 22:10 myfile.txt
+
+~# chmod u=rwx,g=r-x,o=r-x myfile.txt	(To change permission using letters)	
+-rwxr-xr-x 1 root root 44 Aug 24 22:10 myfile.txt
+
 
 
 
