@@ -1,0 +1,24 @@
+To list specific task:
+======================
+tasklist /v /fi "imagename eq vmwp.exe" /fo list
+
+To kill tasks:
+==============
+taskkill /pid 29184 /f
+
+## Where /f = force  
+
+
+Reference URL:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://community.spiceworks.com/t/killing-ending-a-hyper-v-virtual-machine-that-is-stuck/1004325/2
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ |+~~~~~~~~~~~~~~~+
+ || Best Regards  |
+ || mosab balla   |
+ || Mohamed Ayman |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |

@@ -1,0 +1,88 @@
+Controlling access to files in Linux:
+------------------------------------- 
+1- Default file permissions:
+############################
+
+To get default file permissions:-
+=================================
+~# umask	(Default umask value are 0022 )
+0022
+
+To default file permissions:-
+=============================
+~# umask 077	(to change umask but it is volatile )
+
+2- Special file permissions:
+############################
+
+
+Permissions:
+setuid(s) 4
+setgid(s) 2
+sticky(t) 1
+
+Symbolically: setuid=u+s; setgid=g+s; sticky=o+t
+
+To apply setuid for file:-
+==========================
+~# chmod u+s myfile.txt
+
+To apply setgid for file:-
+==========================
+~# chmod g+s myfile.txt
+
+To apply setgid for directory:-
+==========================
+~# chmod -R o+t mydir/    
+
+
+Note:
+There are many Linux command use setuid to run such as passwd
+~# ls -l /usr/bin/passwd
+-rwsr-xr-x 1 root root 59976 Feb  6  2024 /usr/bin/passwd
+
+3- File access list (setfacl):
+##############################
+
+
+To install file access list (getfacl):-
+=====================================
+~# apt install acl 		(In Debian based OS)
+~# yum install acl 		(In REHL based OS)
+
+
+To get file access list (getfacl):-
+=====================================
+~# getfacl myfile.txt
+# file: myfile.txt
+# owner: door
+# group: door
+user::rwx
+group::r-x
+other::---
+
+To set file access list (setfacl):-
+=====================================
+~# setfacl -m u:door:rwx myfile.txt		(To change user acl)
+~# setfacl -m g:admins:rwx myfile.txt		(To change group acl)
+
+
+
+
+
+
+
+To find all labs go to this link:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://github.com/kabantsh/Servers/tree/master/Linux
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+This is edited by vim text editor 
+
+ |+~~~~~~~~~~~~~~~+
+ || Best Regards  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
