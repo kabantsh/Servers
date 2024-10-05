@@ -66,6 +66,17 @@ To set file access list (setfacl):-
 ~# setfacl -m u:door:rwx myfile.txt		(To change user acl)
 ~# setfacl -m g:admins:rwx myfile.txt		(To change group acl)
 
+To remove file access list
+============================
+~# setfacl -x g:admins myfile.txt
+
+To Copying the ACL of one file:
+===============================
+~# getfacl myfile.txt | setfacl --set-file=- file1.txt
+
+
+For more info you can always check the manuals:
+~# man setfacl
 
 
 
@@ -76,7 +87,7 @@ To find all labs go to this link:
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 https://github.com/kabantsh/Servers/tree/master/Linux
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-This is edited by vim text editor 
+
 
  |+~~~~~~~~~~~~~~~+
  || Best Regards  |
