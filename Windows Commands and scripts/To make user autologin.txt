@@ -1,0 +1,34 @@
+To make user autologin:
+======================
+netplwiz
+
+## You can do it from this wizard and enable this option 
+(✔) Users must enter a user name and password to use this computer
+
+If it is not available you can edit the registry: 
+1- Open Registry Editor. 
+2- Go to this path and delete below entry:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device\DevicePasswordLessBuildVersion
+
+3- Go to this path and 
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WinLogon
+
+4- Add below entry with REG_SZ type
+DefaultDomainName
+DefaultUserName
+DefaultPassword
+
+
+
+Reference URL:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://www.lifewire.com/how-do-i-auto-login-to-windows-2626066
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ |+~~~~~~~~~~~~~~~+
+ || Best Regards  |
+ || Mohamed Ayman |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
