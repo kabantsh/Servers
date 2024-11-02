@@ -1,22 +1,57 @@
- multipath أوامر 
+multipath أوامر 
+=============
+أمثلة على استخدام أوامر Multipath
 
-multipath -l: يعرض قائمة بالأجهزة المتصلة.
-multipath -F: يعرض معلومات مفصلة عن الأجهزة.
-multipath -ll: يعرض معلومات أكثر تفصيلاً.
+1. عرض معلومات أساسية عن أجهزة Multipath:
+~# multipath -l
 
+2. عرض معلومات مفصلة عن أجهزة Multipath:
+~# multipath -ll
+
+3. عشان تعمل استعادة للإعدادات الأساسية لجهاز معين في Multipath:
+~# multipath -f <device_name>
+~# multipath -f mpath0
+
+4. عشان تعمل استعادة للإعدادات الأساسية لكل الأجهزة في Multipath:
+~# multipath -F
+
+5. لإضافة جهاز إلى ملف wwids:
+~# multipath -a <device_wwid>
+~# multipath -a 36005080300000001
+
+6. لحذف جهاز إلى ملف wwids:
+~# multipath -w <device_wwid>
+~# multipath -w 36005080300000001
+
+7. للتحقق من وجود جهاز في ملف ال multipath:
+~# multipath -c <device_path>
+~# multipath -c /dev/sda
+
+
+8. لعرض الإعدادات الحالية ل multipathd:
+~# multipath -t
 
 
 1- To generate new configuration for multipath.conf file 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% ~# multipathd -d -s %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
+~# multipathd -d -s
+
 
 -d => To run multipathd in background
 -s => Surpress timestamps (print only timestamp)
 
 
+2- To start multipathd service :
+~# systemctl start multipathd.service
 
 
+3- To go to multipathd configuration file:
+~# vim /etc/multipath.conf
+
+
+
+
+for more information check configuration file manual:
+~# man 5 multipath.conf
 
  |+~~~~~~~~~~~~~~~+
  || Best regrets  |

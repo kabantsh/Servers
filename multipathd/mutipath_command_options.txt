@@ -1,0 +1,54 @@
+multipath-tools v0.8.8 (03/12, 2021)
+Usage:
+  multipath [-v level] [-B|-d|-i|-q|-r] [-b file] [-p policy] [device]
+  multipath [-v level] [-R retries] -f device
+  multipath [-v level] [-R retries] -F
+  multipath [-v level] [-l|-ll] [device]
+  multipath [-v level] [-a|-w] device
+  multipath [-v level] -W
+  multipath [-v level] [-i] [-c|-C] device
+  multipath [-v level] [-i] [-u|-U]
+  multipath [-h|-t|-T]
+
+Where:
+  -h      print this usage text
+  -l      show multipath topology (sysfs and DM info)
+  -ll     show multipath topology (maximum info)
+  -e      enable foreign libraries with -l/-ll
+  -f      flush a multipath device map
+  -F      flush all multipath device maps
+  -a      add a device wwid to the wwids file
+  -c      check if a device should be a path in a multipath device
+  -C      check if a multipath device has usable paths
+  -q      allow queue_if_no_path when multipathd is not running
+  -d      dry run, do not create or update devmaps
+  -t      display the currently used multipathd configuration
+  -T      display the multipathd configuration without builtin defaults
+  -r      force devmap reload
+  -i      ignore wwids file
+  -B      treat the bindings file as read only
+  -b fil  bindings file location
+  -w      remove a device from the wwids file
+  -W      reset the wwids file include only the current devices
+  -R num  number of times to retry removes of in-use devices
+  -u      check if the device specified in the program environment should be a
+          path in a multipath device
+  -U      check if the device specified in the program environment is a
+          multipath device with usable paths, see -C flag
+  -p pol  force all maps to specified path grouping policy:
+          . failover            one path per priority group
+          . multibus            all paths in one priority group
+          . group_by_serial     one priority group per serial
+          . group_by_prio       one priority group per priority lvl
+          . group_by_node_name  one priority group per target node
+  -v lvl  verbosity level:
+          . 0 no output
+          . 1 print created devmap names only
+          . 2 default verbosity
+          . 3 print debug information
+  device  action limited to:
+          . multipath named 'device' (ex: mpath0)
+          . multipath whose wwid is 'device' (ex: 60051...)
+          . multipath including the path named 'device' (ex: /dev/sda or
+            /dev/dm-0)
+          . multipath including the path with maj:min 'device' (ex: 8:0)
