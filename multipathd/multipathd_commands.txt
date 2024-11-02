@@ -1,0 +1,29 @@
+ multipath أوامر 
+
+multipath -l: يعرض قائمة بالأجهزة المتصلة.
+multipath -F: يعرض معلومات مفصلة عن الأجهزة.
+multipath -ll: يعرض معلومات أكثر تفصيلاً.
+
+
+
+1- To generate new configuration for multipath.conf file 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ~# multipathd -d -s %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+-d => To run multipathd in background
+-s => Surpress timestamps (print only timestamp)
+
+
+
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best regrets  |
+ || Mohamed Ayman |
+ || Mosab Balla   |
+ || kabantsh      |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
