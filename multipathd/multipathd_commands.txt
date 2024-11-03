@@ -53,6 +53,15 @@ multipath أوامر
 for more information check configuration file manual:
 ~# man 5 multipath.conf
 
+
+4- To get WWN of HBA (where ? refer to HBA number):
+~# cat /sys/class/fc_host/host?/port_name       
+
+5- To rescan controller of specified HBA (where ? refer to HBA number):
+~# echo 1 > /sys/class/fc_host/host?/issue_lib 
+
+!!!!! be careful when using this command, as disk will be connected !!!!!
+
  |+~~~~~~~~~~~~~~~+
  || Best regrets  |
  || Mohamed Ayman |
