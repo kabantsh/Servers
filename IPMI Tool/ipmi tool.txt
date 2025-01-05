@@ -11,6 +11,11 @@
 ============================
 ~# ipmitool sensor
 
-4- To print server ipmi ip :
+4- To show ipmi commands :
+============================
+~# ipmitool list
+
+5- To print server ipmi ip :
 ============================
 ~# ipmitool LAN print
+
