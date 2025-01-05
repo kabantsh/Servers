@@ -10,3 +10,7 @@
 3- To print sensors status :
 ============================
 ~# ipmitool sensor
+
+4- To print server ipmi ip :
+============================
+~# ipmitool LAN print
