@@ -19,3 +19,8 @@
 ============================
 ~# ipmitool LAN print
 
+6- for more information you can check manual of ipmitool :
+============================
+~# man ipmitool
+
+
