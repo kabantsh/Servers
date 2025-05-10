@@ -1,0 +1,78 @@
+Monitoring and Managing Processes and Services in Linux:
+------------------------------------- ------------------
+1- Monitoring and Managing Processes:
+#####################################
+- A process is a program which is being executed
+- Any process may create a child process. All processes are descendants of the first system process, which is systemd on a RHEL system.
+
+
+Identifying Shell Processes:
+===========================
+bash: Starts a new bash shell.
+echo $$: Displays the Process ID (PID) of the current shell. 
+Note how the PID changes after exiting and returning to the parent shell.
+
+
+
+To display current process:-
+============================
+~# ps	(Displays a snapshot of the current processes.)
+
+~# ps -aux	(Displays all process with more info.)
+
+a: All processes attached to a terminal.
+u: Provides more columns in the output (user, CPU, memory, etc.).
+x: All processes not attached to a terminal.
+
+
+~# pstree (Displays running processes as a tree, showing parent-child relationships).
+
+
+
+To display process in real-time:-
+=================================
+
+~# top
+
+
+To display process in real-time with colors :-
+==============================================
+
+~# htop
+
+
+To display process in real-time with GUI tools :-
+==============================================
+~# gnome-system-monitor 
+
+
+
+For more info you can always check the manuals:
+~# man ps
+
+~# man top
+
+or you can open a session with a Generative AI:
+
+"Please act as a Linux expert and tell more about top tool"
+
+
+
+
+
+
+To find all labs go to this link:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://github.com/kabantsh/Servers/tree/master/Linux
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+added from Kabantsh-VM
+
+
+ |+~~~~~~~~~~~~~~~+
+ || Best Regards  |
+ || Mohamed Ayman |
+ || kabantsh	  |
+ |+~~~~~~~~~~~~~~~+
+ |
+ |
+ |
