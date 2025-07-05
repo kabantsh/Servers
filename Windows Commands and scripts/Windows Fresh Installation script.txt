@@ -63,3 +63,7 @@ winget install RARLab.WinRAR
 
 :: To install Simplewall for block unnessecary traffic
 winget install Henry++.simplewall
+
+
+:: To install SoftDeluxe FreeDownload Manager 
+winget install SoftDeluxe.FreeDownloadManager
