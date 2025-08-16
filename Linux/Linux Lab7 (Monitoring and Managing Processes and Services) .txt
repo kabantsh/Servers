@@ -48,6 +48,7 @@ To display process in real-time with GUI tools :-
 Listing and Managing Shell Jobs:
 ==================================
 The jobs, bg, and fg commands are essential for managing processes you've started in your current shell session.
+
 ~# jobs (Displays a list of jobs, their state, and command.)
 [job_number]: A unique number assigned to the job. Use this with fg and bg.
 +: Indicates the most recently suspended or backgrounded job.
@@ -55,6 +56,17 @@ The jobs, bg, and fg commands are essential for managing processes you've starte
 Running: The job is executing in the background.
 Stopped: The job is paused.
 
+To run command in background:-
+===============================
+~# sleep 60 &
+
+or if it is running you can use bg command
+~# bg %1
+
+To run command in forground:-
+============================
+by default any command will run in forground
+~# fg %1
 
 
 
