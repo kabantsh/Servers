@@ -60,7 +60,7 @@ To run command in background:-
 ===============================
 ~# sleep 60 &
 
-or if it is running you can use bg command
+or if it is running you can use bg command (where %1 = job id)
 ~# bg %1
 
 To run command in forground:-
