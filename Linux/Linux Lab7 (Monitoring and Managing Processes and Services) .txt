@@ -45,6 +45,17 @@ To display process in real-time with GUI tools :-
 ==============================================
 ~# gnome-system-monitor 
 
+Listing and Managing Shell Jobs:
+==================================
+The jobs, bg, and fg commands are essential for managing processes you've started in your current shell session.
+~# jobs (Displays a list of jobs, their state, and command.)
+[job_number]: A unique number assigned to the job. Use this with fg and bg.
++: Indicates the most recently suspended or backgrounded job.
+-: Indicates the next most recent job.
+Running: The job is executing in the background.
+Stopped: The job is paused.
+
+
 
 
 For more info you can always check the manuals:
